@@ -1,0 +1,39 @@
+.foreground {
+    color: cyan;
+}
+
+.background {
+    background-color: bisque;
+}
+
+.opacity {
+    background-color: #461e80;
+    opacity: 0.2;
+}
+
+.serif {
+    font-family: Georgia, serif;
+}
+
+.sans-serif {
+    font-family: Helvetica, sans-serif;
+}
+.font-size {
+    font-size: 10px;
+}
+.font-weight {
+    font-weight: 800;
+}
+.font-style {
+    font-style: italic;
+}
+.text-decor {
+    text-decoration: line-through;
+    font-style: italic;
+}
+.text-align{
+    text-align: center;
+}
+.text-shadow{
+    text-shadow: 2px 2px 3px #333;
+}
