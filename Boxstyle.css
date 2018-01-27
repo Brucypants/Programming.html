@@ -1,0 +1,45 @@
+body {
+    height: 2000px;
+}
+
+.box1 {
+    height: 300px;
+    width: 80%;
+    max-width: 600px;
+    min-width: 200px;
+    background-color: chocolate;
+}
+
+.text {
+    height: 50%;
+    width: 50%;
+    background-color: crimson;
+    margin: 2px auto 1% auto;
+    border: 2px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 3%;
+    box-shadow: 5px 5px 3px #333;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: darkmagenta;
+}
+
+.box-1 {
+    width: 150px;
+    height: 150px;
+    background-color: deeppink;
+}
+.box-2, 
+.box-3,
+.box {
+    display: inline-block;
+}
+.box-2 {
+    position: fixed;
+    top: 100px;
+    z-index: -1;
+}
