@@ -3,10 +3,8 @@ body {
 }
 
 .box1 {
-    height: 300px;
-    width: 80%;
-    max-width: 600px;
-    min-width: 200px;
+    height: 100px;
+    width: 100px;
     background-color: chocolate;
 }
 

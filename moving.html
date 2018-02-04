@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Moving</title>
+    <style>
+        .background{
+            background-color: coral;
+            animation: background-color 10s linear infinite;
+        }
+        section,
+        body,
+        html {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .row {
+            height: 10%;
+            width: 100%;
+            background-color: firebrick;
+            border-radius: 1px;
+            animation: moving 10s ease-in-out infinite;
+
+        }
+
+        .row2 {
+            animation-delay: 0.1s;
+        }
+
+        .row3 {
+            animation-delay: 0.2s;
+        }
+
+        .row4 {
+            animation-delay: 0.3s;
+        }
+
+        .row5 {
+            animation-delay: 0.4s;
+        }
+
+        .row6 {
+            animation-delay: 0.5s;
+        }
+
+        .row7 {
+            animation-delay: 0.6s;
+        }
+
+        .row8 {
+            animation-delay: 0.7s;
+        }
+
+        .row9 {
+            animation-delay: 0.8s;
+        }
+
+        .row10 {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes moving {
+            0% {
+                width: 100%;
+                background-color: firebrick;
+            }
+            50% {
+                width: 1%;
+                background-color: chartreuse;
+            }
+            100% {
+                width: 100%;
+                background-color: firebrick;
+            }
+        }
+        @keyframes background-color{
+            0%{
+                background-color: coral;
+            }
+            25%{
+                background-color: aqua;
+            }
+            50%{
+                background-color: crimson;
+            }
+            75%{
+                background-color: darkviolet;
+            }
+            100%{
+                background-color: coral;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="background">
+        <!--        <div class="rbox"></div>-->
+        <div class="row row1"></div>
+        <div class="row row2"></div>
+        <div class="row row3"></div>
+        <div class="row row4"></div>
+        <div class="row row5"></div>
+        <div class="row row6"></div>
+        <div class="row row7"></div>
+        <div class="row row8"></div>
+        <div class="row row9"></div>
+        <div class="row row10"></div>
+    </section>
+
+
+
+</body>
+</html>
