@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        section {
+            display: inline-block;
+            width: 33%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cat Clicker</h1>
+    </header>
+
+    <main>
+
+        <section cat-id="0">
+            <h2>Get Back To Work</h2>
+            <div cat-id="0"><img src="http://img.diply.com/article-images/a/527df545-088e-4956-8283-d71f0509ee88.jpg" alt="Normal Cat"></div>
+            <p>Clicks: </p>
+        </section>
+
+        <section cat-id="1">
+            <h2>You Do Not See Me</h2>
+            <div cat-id="1"><img src="https://i.pinimg.com/736x/dc/6e/49/dc6e49d1c6fdc548282792aa5aab4891--cute-cat-memes-funny-animal-quotes.jpg" alt="Towel Cat"></div>
+            <p>Clicks: </p>
+        </section>
+
+        <section cat-id="2">
+            <h2>I'm a Cat</h2>
+            <div cat-id="2"><img src="http://costumepop.com/wp-content/uploads/2009/08/dog-dressed-as-cat.jpg" alt="Dog Cat"></div>
+            <p>Clicks: </p>
+        </section>
+
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var numberOdClicks = [
+                0,0,0
+            ];
+            
+            var cats = document.getElementsByTagName("div");
+            
+           for (var i in cats) {
+                var cat = cats[i];
+                cat.addEventListener("click", clickHandler);
+            }
+            
+        });
+    </script>
+
+</body>
+
+</html>
