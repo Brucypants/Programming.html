@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <style>
+		img {
+			width: 100px;
+			height: 100px;
+		}
+		
+		section {
+			display: inline-block;
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Cat Clicker</h1>	
+	</header>
+	
+	<main>
+		<section cat-id="0">
+			<h2>Normal Cat</h2>
+			<div cat-id="0">
+				<img src="http://img.diply.com/article-images/a/527df545-088e-4956-8283-d71f0509ee88.jpg" alt="Normal Cat">
+			</div>
+			<p></p>
+		</section>
+		
+		<section cat-id="1">
+			<h2>Dog Cat</h2>
+			<div cat-id="1">
+				<img src="http://costumepop.com/wp-content/uploads/2009/08/dog-dressed-as-cat.jpg" alt="Dog Cat">
+			</div>
+			<p></p>
+		</section>
+		
+		<section cat-id="2">
+			<h2>Towel Cat</h2>
+			<div cat-id="2">
+				<img src="https://i.pinimg.com/736x/dc/6e/49/dc6e49d1c6fdc548282792aa5aab4891--cute-cat-memes-funny-animal-quotes.jpg" alt="Towel Cat">
+			</div>
+			<p></p>
+		</section>
+	</main>
+	
+	<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+	
+	<script>
+		// something.addEventListener("SomeEvent", somethingToRunWhenEventHappens)
+				
+		// catPicture.addEventListenser("click", increaseTheNumberOfClicks);
+		$(function() {
+			var numberOfClicks = [
+				0, 0, 0
+			]; // a number to track number of clicks for each cat
+			
+			// save the DOM elements inside these variables
+			var sections = $("section");
+			var cats = $("div");
+			
+			
+			// var myFunctionName = function(<arguement>) {
+			//		// something to run when the function is called
+			// }
+			
+			// function myFunctionName (<argument>) {
+			// 		// Something to run
+			// }
+			
+			var refreshClicks = function() {
+				for (var i = 0; i < sections.length; i++) {
+					var cat = sections[i];
+					var click = numberOfClicks[i];
+					cat.querySelector('p').innerHTML = "Clicks: " + click;
+				}
+			};
+			
+			var clickHandler = function() {
+				var catId = this.getAttribute('cat-id');
+				numberOfClicks[catId]++;
+				refreshClicks();
+			};
+			
+			for (var i = 0; i < cats.length; i++) {
+				var cat = cats[i];
+				cat.addEventListener('click', clickHandler);
+			}
+			
+			refreshClicks();
+		});
+	</script>
+	
+</body>
+</html>

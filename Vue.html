@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        section {
+            display: inline-block;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vue-app">
+        <header>
+            <h1>Cat Clicker</h1>
+        </header>
+        <main>
+            <section v-for="cat in cats">
+                <h2>{{cat.catName}}</h2>
+                <div v-on:click="increaseClick(cat)">
+                    <img v-bind:src="cat.picUrl" v-bind:alt="cat.catName">
+                </div>
+                <p>Clicks: {{cat.clicks}}</p>
+            </section>
+        </main>
+        {{message}}
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#vue-app',
+            data: {
+                message: 'Have Fun!',
+                cats: [{
+                    catName: 'Normal Cat',
+                    picUrl: 'http://img.diply.com/article-images/a/527df545-088e-4956-8283-d71f0509ee88.jpg',
+                    clicks: 0
+                }, {
+                    catName: 'Dog Cat',
+                    picUrl: 'http://costumepop.com/wp-content/uploads/2009/08/dog-dressed-as-cat.jpg',
+                    clicks: 0
+                }, {
+                    catName: 'Towel Cat',
+                    picUrl: 'https://i.pinimg.com/736x/dc/6e/49/dc6e49d1c6fdc548282792aa5aab4891--cute-cat-memes-funny-animal-quotes.jpg',
+                    clicks: 0
+                }]
+
+            },
+            methods: {
+                increaseClick: function(cat) {
+                    cat.clicks++;
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
